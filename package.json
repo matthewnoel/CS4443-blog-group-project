@@ -16,7 +16,7 @@
     "url": "https://github.com/matthewnoel/CS4443-blog-group-project/issues"
   },
   "homepage": "https://github.com/matthewnoel/CS4443-blog-group-project#readme",
-  "devDependencies": {
+  "dependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
     "babel-preset-minify": "^0.5.1"
