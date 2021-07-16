@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Blog website for a class project",
   "scripts": {
-    "build": "rm -rf dist && mkdir dist && babel src --out-dir dist --copy-files",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,10 +15,5 @@
   "bugs": {
     "url": "https://github.com/matthewnoel/CS4443-blog-group-project/issues"
   },
-  "homepage": "https://github.com/matthewnoel/CS4443-blog-group-project#readme",
-  "dependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "babel-preset-minify": "^0.5.1"
-  }
+  "homepage": "https://github.com/matthewnoel/CS4443-blog-group-project#readme"
 }
