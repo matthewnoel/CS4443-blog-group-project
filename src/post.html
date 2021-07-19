@@ -20,6 +20,33 @@
 <body>
     <div id="HEADER-ID"></div>
     <main id="MAIN-ID"></main>
+    <form enctype="multipart/form-data" method="post" id="blog_form">
+        <fieldset>
+            <h2>
+                <textarea placeholder="TITLE" cols="150" id="title"></textarea>
+            </h2>
+            <p>
+                <textarea placeholder="CONTENT" rows="6" cols="150" id="content"></textarea>
+            </p>
+            
+            <!--
+            <div class="container">
+                <label for="image_upload">Choose file to upload (PNG, JPG)</label>
+                <input type="file" id="image_upload" name="image_upload" accept=".jpg, .jpeg, .png" multiple>
+                <div class="preview">
+                    <p>No files currently selected for upload</p>
+                </div>
+                <div>
+                    <button type='submit'>POST</button>
+                </div>
+            </div>
+            -->
+            <div>
+                <button type="submit">POST</button>
+            </div>
+        </fieldset>
+    </form>   
+
 </body>
 
 </html>
