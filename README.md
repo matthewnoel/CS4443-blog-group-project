@@ -1,6 +1,7 @@
 # CS4443 Blog Group Project
 
 Blogging website for class group project
+
 Public URL: https://cs4443-blog-group-project.web.app/
 
 ## Overview
