@@ -6,7 +6,7 @@ Public URL: https://cs4443-blog-group-project.web.app/
 
 ## Overview
 
-The project uses [firebase](https://firebase.google.com/) for a backend. Most of the logic including the auth flow is hidden in src/base/ for the convenience of other group members. Each html page has a corresponding javascript file which contains a currently unimplemented function. Each function also has a corresponding test function in `src/globals.js` which can be used as an example. The functions are listed below and the suggested completion order is:
+The project uses [firebase](https://firebase.google.com/) for a backend. Most of the logic including the auth flow is hidden in src/base/ for the convenience of other group members. Each html page has a corresponding javascript file which contains a currently unimplemented function. Each function also has a corresponding test function in `src/base/global.js` which can be used as an example. The functions are listed below and the suggested completion order is:
 
 1. src/post.js (So everyone can make posts)
 2. src/indexjs (So a list of all blogs can be seen)
