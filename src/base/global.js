@@ -15,11 +15,16 @@ let should_render_profile = false;
 
 Tests.testGetPostListContainer = function (blog_objs) {
   const container = document.createElement("div");
+  container.className = "TEST-PAGE";
   if (blog_objs == null) {
     Utils.createAndAppendElements(
       {
-        tag: "p",
-        innerText: "Blog not found.",
+        tag: "div",
+        className: "TEST-CENTER-TEXT",
+        child: {
+          tag: "p",
+          innerText: "Blog not found.",
+        },
       },
       container
     );
@@ -28,8 +33,12 @@ Tests.testGetPostListContainer = function (blog_objs) {
   if (blog_objs.length === 0) {
     Utils.createAndAppendElements(
       {
-        tag: "p",
-        innerText: "This blog has no posts.",
+        tag: "div",
+        className: "TEST-CENTER-TEXT",
+        child: {
+          tag: "p",
+          innerText: "This blog has no posts.",
+        },
       },
       container
     );
@@ -39,11 +48,28 @@ Tests.testGetPostListContainer = function (blog_objs) {
     Utils.createAndAppendElements(
       {
         tag: "div",
-        className: "CARD",
+        className: "TEST-CARD TEST-ROW",
         child: [
-          { tag: "p", innerText: blog_obj.title },
-          { tag: "p", innerText: Utils.truncateStr(blog_obj.body) },
-          { tag: "a", innerText: "Read", href: `/view.html?p=${blog_obj.id}` },
+          {
+            tag: "div",
+            child: [
+              {
+                tag: "p",
+                innerText: blog_obj.title,
+                className: "TEST-BLOG-TITLE",
+              },
+              {
+                tag: "p",
+                innerText: Utils.truncateStr(blog_obj.body),
+                className: "TEST-MEDIUM",
+              },
+            ],
+          },
+          {
+            tag: "a",
+            innerText: "Read",
+            href: `/view.html?p=${blog_obj.id}`,
+          },
         ],
       },
       container
@@ -54,12 +80,17 @@ Tests.testGetPostListContainer = function (blog_objs) {
 
 Tests.testGetBlogsListContainer = function (blog_objs) {
   const container = document.createElement("div");
+  container.className = "TEST-PAGE";
   if (blog_objs.length === 0) {
     Utils.createAndAppendElements(
       {
-        tag: "p",
-        innerText:
-          "No blogs have been created yet. Consider making an account!",
+        tag: "div",
+        className: "TEST-CENTER-TEXT",
+        child: {
+          tag: "p",
+          innerText:
+            "No blogs have been created yet. Consider making an account!",
+        },
       },
       container
     );
@@ -69,7 +100,7 @@ Tests.testGetBlogsListContainer = function (blog_objs) {
     Utils.createAndAppendElements(
       {
         tag: "div",
-        className: "CARD",
+        className: "TEST-CARD TEST-ROW",
         child: [
           { tag: "p", innerText: blog_obj.name },
           {
@@ -87,6 +118,7 @@ Tests.testGetBlogsListContainer = function (blog_objs) {
 
 Tests.testGetPostManagerListContainer = function (post_objs) {
   const container = document.createElement("div");
+  container.className = "TEST-PAGE TEST-CENTER-TEXT";
   if (post_objs == null) {
     Utils.createAndAppendElements(
       {
@@ -114,13 +146,27 @@ Tests.testGetPostManagerListContainer = function (post_objs) {
       {
         tag: "div",
         id: post_obj.id,
-        className: "CARD",
+        className: "TEST-CARD TEST-ROW",
         child: [
-          { tag: "p", innerText: post_obj.title },
-          { tag: "p", innerText: Utils.truncateStr(post_obj.body) },
+          {
+            tag: "div",
+            child: [
+              {
+                tag: "p",
+                innerText: post_obj.title,
+                className: "TEST-PROFILE-TITLE",
+              },
+              {
+                tag: "p",
+                innerText: Utils.truncateStr(post_obj.body),
+                className: "TEST-PROFILE-BODY",
+              },
+            ],
+          },
           {
             tag: "button",
             id: `button_${post_obj.id}`,
+            className: "TEST-BUTTON",
             innerText: "Delete",
             addEventListener: {
               type: "click",
@@ -150,11 +196,17 @@ Tests.testGetPostManagerListContainer = function (post_objs) {
 
 Tests.testGetPostContainer = function (post_obj) {
   const container = document.createElement("div");
+  container.className = "TEST-PAGE";
   if (post_obj == null) {
     Utils.createAndAppendElements(
       {
-        tag: "p",
-        innerText: "This post does not exits.",
+        tag: "div",
+        className: "TEST-CENTER-TEXT",
+        child: {
+          tag: "p",
+          className: "TEST-MEDIUM",
+          innerText: "This post does not exits.",
+        },
       },
       container
     );
@@ -168,14 +220,18 @@ Tests.testGetPostContainer = function (post_obj) {
         {
           tag: "p",
           innerText: post_obj.title,
+          className: "TEST-LARGE",
         },
         {
           tag: "p",
           innerText: `Author: ${post_obj.name}`,
+          className: "TEST-SMALL",
+          id: "TEST-VIEW-AUTHOR",
         },
         {
           tag: "p",
           innerText: Utils.truncateStr(post_obj.body),
+          className: "TEST-MEDIUM",
         },
       ],
     },
@@ -186,6 +242,7 @@ Tests.testGetPostContainer = function (post_obj) {
 
 Tests.testGetNewPostContainer = function () {
   const container = document.createElement("div");
+  container.className = "TEST-PAGE";
   const input_id = "TEST-NEW-POST-TITLE-ID";
   const textarea_id = "TEST-NEW-POST-TEXTAREA-ID";
   const message_id = "TEST-NEW-POST-MESSAGE-ID";
@@ -196,11 +253,13 @@ Tests.testGetNewPostContainer = function () {
         type: "text",
         id: input_id,
         placeholder: "Post Title",
+        className: "TEST-FORM",
       },
       {
         tag: "textarea",
         id: textarea_id,
         placeholder: "Body",
+        className: "TEST-FORM",
       },
       {
         type: "div",
@@ -213,6 +272,7 @@ Tests.testGetNewPostContainer = function () {
           },
           {
             tag: "button",
+            className: "TEST-BUTTON POINTER",
             innerText: "Post",
             addEventListener: {
               type: "click",
@@ -418,8 +478,14 @@ Globals.renderHeader = function () {
   Utils.createAndAppendElements(
     [
       {
-        tag: "span",
-        innerText: "Blog Site",
+        tag: "a",
+        href: "/",
+        child: {
+          tag: "img",
+          src: "base/logo.png",
+          id: "LOGO",
+          alt: "CS4443 Blog Giraffe Logo",
+        },
       },
       {
         tag: "nav",
@@ -448,6 +514,7 @@ Globals.renderHeader = function () {
           tag: "span",
           id: "AUTH-ID",
           innerText: "",
+          className: "POINTER",
         },
       },
     ],
@@ -538,21 +605,27 @@ Globals.renderAuthOverLay = function () {
           {
             tag: "p",
             innerText: "Welcome",
+            className: "TEST-LARGE",
           },
           {
             tag: "input",
             type: "text",
+            placeholder: "Email",
             id: "EMAIL-ID",
+            className: "TEST-FORM",
           },
           {
             tag: "input",
             type: "password",
+            placeholder: "Password",
             id: "PASS-ID",
+            className: "TEST-FORM",
           },
           {
             tag: "button",
             innerText: "Create Account",
             id: "CREATE-ACCOUNT-ID",
+            className: "TEST-BUTTON",
             addEventListener: {
               type: "click",
               listener: Globals.onFormCreateAccount,
@@ -562,6 +635,7 @@ Globals.renderAuthOverLay = function () {
             tag: "button",
             innerText: "Sign In",
             id: "SIGN-IN-ID",
+            className: "TEST-BUTTON",
             addEventListener: {
               type: "click",
               listener: Globals.onFormSignIn,

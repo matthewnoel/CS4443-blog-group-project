@@ -14,7 +14,8 @@ const onError = function (message) {
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 */
 function getNewPostContainer() {
-  return Tests.testGetNewPostContainer();
+  // Uncomment the following line to use the testing version of the page
+  // return Tests.testGetNewPostContainer();
 
   console.log("Called getNewPostContainer");
   return null;

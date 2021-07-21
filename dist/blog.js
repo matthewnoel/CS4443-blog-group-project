@@ -5,4 +5,5 @@
   /view page for the post. You will need to pass the post id as the query parameter 'p' to
   the view page. Your element will be appended to the main element of the document.
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-*/function getPostListContainer(a){return Tests.testGetPostListContainer(a);var b,c=_createForOfIteratorHelper(a)}main(Pages.BLOG);
+*/function getPostListContainer(a){// Uncomment the following line to use the testing version of the page
+return Tests.testGetPostListContainer(a);var b,c=_createForOfIteratorHelper(a)}main(Pages.BLOG);

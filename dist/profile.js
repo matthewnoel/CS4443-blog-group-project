@@ -4,4 +4,5 @@
   user may delete. You will call Utils.deleteBlogPost(id, onSuccess, onError) to delete.
   Your element will be appended to the main element of the document.
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-*/function getPostManagerListContainer(a){return Tests.testGetPostManagerListContainer(a);var b,c=_createForOfIteratorHelper(a)}main(Pages.PROFILE);
+*/function getPostManagerListContainer(a){// Uncomment the following line to use the testing version of the page
+return Tests.testGetPostManagerListContainer(a);var b,c=_createForOfIteratorHelper(a)}main(Pages.PROFILE);

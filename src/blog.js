@@ -7,7 +7,8 @@
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 */
 function getPostListContainer(post_objs) {
-  return Tests.testGetPostListContainer(post_objs);
+  // Uncomment the following line to use the testing version of the page
+  // return Tests.testGetPostListContainer(post_objs);
 
   console.log("Called getPostListContainer");
 

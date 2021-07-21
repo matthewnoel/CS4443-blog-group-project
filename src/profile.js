@@ -14,7 +14,8 @@ const onError = function (message) {
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 */
 function getPostManagerListContainer(post_objs) {
-  return Tests.testGetPostManagerListContainer(post_objs);
+  // Uncomment the following line to use the testing version of the page
+  // return Tests.testGetPostManagerListContainer(post_objs);
 
   console.log("Called getPostManagerListContainer");
   if (post_objs == null) {

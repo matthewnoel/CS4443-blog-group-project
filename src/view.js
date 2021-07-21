@@ -5,7 +5,8 @@
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 */
 function getPostContainer(post_obj) {
-  return Tests.testGetPostContainer(post_obj);
+  // Uncomment the following line to use the testing version of the page
+  // return Tests.testGetPostContainer(post_obj);
 
   console.log("Called getPostContainer");
   if (post_obj == null) {

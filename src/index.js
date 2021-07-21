@@ -7,7 +7,8 @@
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
 */
 function getBlogsListContainer(blog_objs) {
-  return Tests.testGetBlogsListContainer(blog_objs);
+  // Uncomment the following line to use the testing version of the page
+  // return Tests.testGetBlogsListContainer(blog_objs);
 
   console.log("Called getBlogsListContainer");
   if (blog_objs.length === 0) {

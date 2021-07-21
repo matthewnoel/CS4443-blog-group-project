@@ -5,4 +5,5 @@
   blog name as the query parameter 'n' to the blog page. Your element will be 
   appended to the main element of the document.
   Reference: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-*/function getBlogsListContainer(a){return Tests.testGetBlogsListContainer(a);var b,c=_createForOfIteratorHelper(a)}main(Pages.INDEX);
+*/function getBlogsListContainer(a){// Uncomment the following line to use the testing version of the page
+return Tests.testGetBlogsListContainer(a);var b,c=_createForOfIteratorHelper(a)}main(Pages.INDEX);

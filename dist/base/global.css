@@ -1,12 +1,39 @@
+:root {
+  --brown: #24120c;
+}
+
+body {
+  background-color: #e0e0df;
+}
+
+.TEST-FORM {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  border: 1px solid rgb(216, 216, 216);
+  margin: 10px 0px;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+.POINTER:hover {
+  cursor: pointer;
+}
+
+#LOGO {
+  width: 200px;
+}
+
 #HEADER-ID {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #222222;
+  background-color: #24120c;
   padding: 5px 20px;
-  color: white;
+  color: #f8f9fa;
+  font-size: 20px;
 }
 
 #MAIN-ID {
@@ -22,7 +49,7 @@
 }
 
 #NAV-ID > a {
-  color: white;
+  color: #f8f9fa;
   margin: 5px;
 }
 
@@ -32,7 +59,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgb(73, 110, 165);
+  background-color: #2b160e;
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -45,7 +72,7 @@
 }
 
 #AUTH-FORM-BG {
-  background-color: white;
+  background-color: #f8f9fa;
   border-radius: 10px;
   padding: 20px;
   text-align: center;
@@ -72,7 +99,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: red;
+  background-color: #2b160e;
   z-index: 101;
   display: flex;
   flex-direction: column;
@@ -106,9 +133,78 @@
   text-align: center;
 }
 
-.CARD {
-  border: 1px solid grey;
+.TEST-PROFILE-TITLE {
+  margin-bottom: 10px;
+}
+
+.TEST-PROFILE-BODY {
+  font-size: 20px;
+}
+
+.TEST-BUTTON {
+  background-color: #3b2720;
+  color: #f8f9fa;
+  border: none;
+  border-radius: 8px;
+  align-self: center;
+  padding: 10px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.TEST-BUTTON:hover {
+  cursor: pointer;
+  background-color: #2b160e;
+}
+
+#TEST-VIEW-AUTHOR {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.TEST-BLOG-TITLE {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.TEST-CARD {
+  border: 1px solid rgb(202, 202, 202);
   border-radius: 5px;
   padding: 5px;
-  margin: 5px 0px;
+  margin: 15px 0px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.082);
+}
+
+.TEST-PAGE {
+  background-color: white;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.281);
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid rgb(224, 224, 224);
+  text-align: left;
+}
+
+.TEST-ROW {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.TEST-CENTER-TEXT {
+  text-align: center;
+}
+
+.TEST-SMALL {
+  font-size: 18px;
+}
+
+.TEST-MEDIUM {
+  font-size: 20px;
+}
+
+.TEST-LARGE {
+  font-size: 24px;
 }
